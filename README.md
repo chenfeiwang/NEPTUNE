@@ -12,7 +12,7 @@
 ## Change Log
 
 ### v0.0.3
-# Update README and parameter passing for NEPTUNE
+* Update README and parameter passing for NEPTUNE
 
 ### v0.0.2
 * Update README of NEPTUNE

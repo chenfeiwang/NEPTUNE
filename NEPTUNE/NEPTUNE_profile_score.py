@@ -31,14 +31,13 @@ def calculate_POS_score(infile):
 
 def main():
 
-#	N = 33826        # For Promoter profiles
-	N = 10000        # For CTCF motifs
+	N = 33826
 		
 	NDR_all = {}
 	POS_all = {}
 	for i in range(1,int(sys.argv[2])+1):
-		NDR = calculate_NDR_score('%s_ctcf_siteprof%d'%(sys.argv[1],i))
-		POS = calculate_POS_score('%s_ctcf_siteprof%d'%(sys.argv[1],i))
+		NDR = calculate_NDR_score('%s_siteprof%d'%(sys.argv[1],i))
+		POS = calculate_POS_score('%s_siteprof%d'%(sys.argv[1],i))
 		for j in range(0,N):
 			if NDR_all.has_key(j):
 				NDR_all[j].append(str(NDR[j]))
@@ -48,9 +47,9 @@ def main():
 				POS_all[j] = [str(POS[j])]
 	
 	pos = 0
-	outf1 = open('%s_NDR_ctcf_score.txt'%sys.argv[1],'w')
-	outf2 = open('%s_POS_ctcf_score.txt'%sys.argv[1],'w')
-	for line in open('%s_ctcf_peak'%sys.argv[1],'r').xreadlines():
+	outf1 = open('%s_NDR.promoter_score.txt'%sys.argv[1],'w')
+	outf2 = open('%s_POS.promoter_score.txt'%sys.argv[1],'w')
+	for line in open('%s_peak'%sys.argv[1],'r').xreadlines():
 		line = line.strip().split('\t')
 		print >>outf1, line[3]+'\t'+line[4]+'\t'+'\t'.join(NDR_all[pos])
 		print >>outf2, line[3]+'\t'+line[4]+'\t'+'\t'.join(POS_all[pos])

@@ -1,22 +1,21 @@
-./NEPTUNE.sh MaleP6h_Ctrl_1 3.427344009 &
-./NEPTUNE.sh MaleP6h_Ctrl_2 5.781391481 &
-./NEPTUNE.sh MaleP6h_Ctrl_3 5.037664603 &
-./NEPTUNE.sh MaleP6h_aphidicolin_1 4.237183642 &
-./NEPTUNE.sh MaleP6h_aphidicolin_2 3.883967557 &
-./NEPTUNE.sh MaleP6h_aphidicolin_3 3.412831139 &
-./NEPTUNE.sh MaleP6h_a-amanitin_1 4.242952837 &
-./NEPTUNE.sh MaleP6h_a-amanitin_2 3.310991864 &
-./NEPTUNE.sh MaleP6h_a-amanitin_3 3.986474689 &
-./NEPTUNE.sh FemaleP6h_Ctrl_1 5.701486366 &
-./NEPTUNE.sh FemaleP6h_Ctrl_2 3.91733422 &
-./NEPTUNE.sh FemaleP6h_Ctrl_3 3.49332091 &
-./NEPTUNE.sh FemaleP6h_aphidicolin_1 4.172943469 &
-./NEPTUNE.sh FemaleP6h_aphidicolin_2 3.297904169 &
-./NEPTUNE.sh FemaleP6h_aphidicolin_3 4.620344022 &
-./NEPTUNE.sh FemaleP6h_a-amanitin_1 3.398916561 &
-./NEPTUNE.sh FemaleP6h_a-amanitin_2 3.951077443 &
-./NEPTUNE.sh FemaleP6h_a-amanitin_3 5.213671372 &
-
+./NEPTUNE.sh MaleP6h_Ctrl_1 3.427344009
+./NEPTUNE.sh MaleP6h_Ctrl_2 5.781391481
+./NEPTUNE.sh MaleP6h_Ctrl_3 5.037664603
+./NEPTUNE.sh MaleP6h_aphidicolin_1 4.237183642
+./NEPTUNE.sh MaleP6h_aphidicolin_2 3.883967557
+./NEPTUNE.sh MaleP6h_aphidicolin_3 3.412831139
+./NEPTUNE.sh MaleP6h_a-amanitin_1 4.242952837
+./NEPTUNE.sh MaleP6h_a-amanitin_2 3.310991864
+./NEPTUNE.sh MaleP6h_a-amanitin_3 3.986474689
+./NEPTUNE.sh FemaleP6h_Ctrl_1 5.701486366
+./NEPTUNE.sh FemaleP6h_Ctrl_2 3.91733422
+./NEPTUNE.sh FemaleP6h_Ctrl_3 3.49332091
+./NEPTUNE.sh FemaleP6h_aphidicolin_1 4.172943469
+./NEPTUNE.sh FemaleP6h_aphidicolin_2 3.297904169
+./NEPTUNE.sh FemaleP6h_aphidicolin_3 4.620344022
+./NEPTUNE.sh FemaleP6h_a-amanitin_1 3.398916561
+./NEPTUNE.sh FemaleP6h_a-amanitin_2 3.951077443
+./NEPTUNE.sh FemaleP6h_a-amanitin_3 5.213671372
 
 ./NEPTUNE.sh siCtrl_FemaleP8h_1 2.708328707
 ./NEPTUNE.sh siCtrl_FemaleP8h_2 2.835508896

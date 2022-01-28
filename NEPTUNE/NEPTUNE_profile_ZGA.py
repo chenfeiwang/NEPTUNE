@@ -2,19 +2,13 @@ import sys
 import itertools
 import numpy
 
-MalePeak = "MalePSperm_peak"
-FemalePeak = "FemalePMII_peak"
+MalePeak = "MalePN_peak"
+FemalePeak = "FemalePN_peak"
 
-MaleProfile = ["MalePSperm_siteprof1","MalePSperm_siteprof2","MalePSperm_siteprof3","MaleP0.5_siteprof1","MaleP0.5_siteprof2", \
-               "MaleP1_siteprof1","MaleP1_siteprof2","MaleP1_siteprof3","MaleP1.5_siteprof1","MaleP1.5_siteprof2", "MaleP1.5_siteprof3", \
-               "MaleP2_siteprof1","MaleP2_siteprof2","MaleP2_siteprof3","MaleP3_siteprof1","MaleP3_siteprof2",\
-               "MaleP4_siteprof1","MaleP4_siteprof2","MaleP4_siteprof3","MaleP6_siteprof1","MaleP6_siteprof2","MaleP6_siteprof3","MaleP6_siteprof4","MaleP6_siteprof5",\
-               "MaleP8_siteprof1","MaleP8_siteprof2","MaleP8_siteprof3","MaleP8_siteprof4","MaleP12_siteprof1","MaleP12_siteprof2","MaleP12_siteprof3"]
-FemaleProfile = ["FemalePMII_siteprof1","FemalePMII_siteprof2","FemalePMII_siteprof3","FemalePMII_siteprof4","FemalePMII_siteprof5","FemaleP0.5_siteprof1","FemaleP0.5_siteprof2","FemaleP0.5_siteprof3",\
-                 "FemaleP1_siteprof1","FemaleP1_siteprof2","FemaleP1_siteprof3","FemaleP1.5_siteprof1","FemaleP1.5_siteprof2","FemaleP1.5_siteprof3",\
-                 "FemaleP2_siteprof1","FemaleP2_siteprof2","FemaleP2_siteprof3","FemaleP3_siteprof1","FemaleP3_siteprof2","FemaleP3_siteprof3","FemaleP3_siteprof4",\
-                 "FemaleP4_siteprof1","FemaleP4_siteprof2","FemaleP4_siteprof3","FemaleP4_siteprof4","FemaleP6_siteprof1","FemaleP6_siteprof2","FemaleP6_siteprof3","FemaleP6_siteprof4","FemaleP6_siteprof5",\
-                 "FemaleP8_siteprof1","FemaleP8_siteprof2","FemaleP8_siteprof3","FemaleP8_siteprof4","FemaleP12_siteprof1","FemaleP12_siteprof2","FemaleP12_siteprof3"]
+MaleProfile = ["MalePN_siteprof1","MalePN_siteprof2","MalePN_siteprof3","MalePN_siteprof4","MalePN_siteprof5",\
+				"MalePN_siteprof6","MalePN_siteprof7","MalePN_siteprof8","MalePN_siteprof9","MalePN_siteprof10",]
+FemaleProfile = ["FemalePN_siteprof1","FemalePN_siteprof2","FemalePN_siteprof3","FemalePN_siteprof4","FemalePN_siteprof5",\
+				"FemalePN_siteprof6","FemalePN_siteprof7","FemalePN_siteprof8","FemalePN_siteprof9","FemalePN_siteprof10",]
 
 def readProfile(peak, profile, subset = 'all'):
 	
@@ -66,8 +60,8 @@ def generateScripts(gene):
 def main():
 
 	generateScripts("all")
-	generateScripts("mm9.minor_ZGA.bed")
-	generateScripts("mm9.major_ZGA.bed")
+	generateScripts("data/mm9.minor_ZGA.bed")
+	generateScripts("data/mm9.major_ZGA.bed")
 	
 if __name__ == "__main__":
 	main()

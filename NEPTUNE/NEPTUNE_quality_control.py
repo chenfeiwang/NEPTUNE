@@ -54,10 +54,10 @@ def extend_sequenced_reads(infile, extension = 37):
 	nucleo_reads.close()
 	print(infile+'\t'+str(nucleo_count))
 
-def rotational_positioning(infile, sample_reads = 1000000):
+def rotational_positioning(infile, fasta, sample_reads = 1000000):
 	"""Calculate the AA/TT/AT frequency based on the uniq reads."""
 	
-	genome = pyfasta.Fasta("/home1/wangchenfei/annotations/mm9/mm9.fa")
+	genome = pyfasta.Fasta(fasta)
 	aattat = [0]*251
 	total = 0
 	for line in open(infile,'r'):
@@ -91,11 +91,11 @@ def rotational_positioning(infile, sample_reads = 1000000):
 	print('nuc_code<-c('+','.join(aattat)+')',file=outf)
 	outf.close()
 
-def statistical_positioning(infile, sample_reads = 100000):
+def statistical_positioning(infile, fasta, sample_reads = 100000):
 	"""
 	Calculate the relative nucleosome to nucleosome positions based on the uniq reads.
 	"""
-	genome = pyfasta.Fasta("/homea2/jxfeng/wangcf/bin/mm9.fa")
+	genome = pyfasta.Fasta(fasta)
 	tagplus, tagminus = {}, {}
 	total = 0
 	for line in open(infile,'r'):
@@ -149,10 +149,14 @@ def statistical_positioning(infile, sample_reads = 100000):
 	
 def main():
 
-	uniq_sequenced_reads(sys.argv[1],sys.argv[2])
-	extend_sequenced_reads(sys.argv[1],int(sys.argv[2]))
-	rotational_positioning(sys.argv[1])
-	statistical_positioning(sys.argv[1])
+	if sys.argv[1] == 'uniq':
+		uniq_sequenced_reads(sys.argv[2],sys.argv[3])
+	elif sys.argv[1] == 'extend':
+		extend_sequenced_reads(sys.argv[2],int(sys.argv[3]))
+	elif sys.argv[1] == 'rotational':
+		rotational_positioning(sys.argv[2],sys.argv[3])
+	elif sys.argv[1] == 'statistical':
+		statistical_positioning(sys.argv[2],sys.argv[3])
 	
 if __name__ == "__main__":
 	main()
